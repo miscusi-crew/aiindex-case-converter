@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Converter</title>
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="base.css">
+<style>
+  main{max-width:48rem}
+  textarea{width:100%;min-height:12rem;resize:vertical;margin:.75rem 0;line-height:1.6}
+  .cases{display:flex;flex-wrap:wrap;gap:.35rem}
+  .cases button{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+  <h1>Case Converter</h1>
+  <p class="sub">Paste text and pick a case.</p>
+  <label class="sr-only" for="text">Text</label>
+  <textarea id="text" spellcheck="false">the quick brown fox jumps over the lazy dog</textarea>
+  <div class="cases" id="cases"></div>
+  <div class="row" style="margin-top:.75rem"><button id="copy" class="primary">Copy</button><button id="clear">Clear</button><span class="stats" id="count"></span></div>
+  <p class="msg" id="msg" role="status"></p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
